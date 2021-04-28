@@ -39,7 +39,7 @@ class SearchApi:
             "fs",
         ]
         query_params = {
-            "doc_type": type,
+            "docType": type,
             "from": offset,
             "size": limit,
             "filter_by": [],
@@ -73,7 +73,7 @@ class SearchApi:
             "fs",
         ]
         query_params = {
-            "doc_type": type,
+            "docType": type,
             "from": offset,
             "size": limit,
             "filter_by": [],
