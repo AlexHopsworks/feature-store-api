@@ -33,6 +33,7 @@ from hsfs.core import (
     training_dataset_api,
     expectations_api,
     feature_group_engine,
+    search_api,
 )
 from hsfs.statistics_config import StatisticsConfig
 
@@ -86,6 +87,7 @@ class FeatureStore:
         self._expectations_api = expectations_api.ExpectationsApi(self._id)
 
         self._feature_group_engine = feature_group_engine.FeatureGroupEngine(self._id)
+        self._search_api = search_api.SearchApi()
 
     @classmethod
     def from_response_json(cls, json_dict):
@@ -122,6 +124,151 @@ class FeatureStore:
         return self._feature_group_api.get(
             name, version, feature_group_api.FeatureGroupApi.CACHED
         )
+
+    def search_feature_groups(
+        self,
+        term: str = None,
+        name: str = None,
+        description: str = None,
+        tags: str = None,
+        offset: int = 0,
+        limit: int = 100,
+    ):
+        json_dict = self._search_api.search(
+            "FEATURE",
+            term=term,
+            name=name,
+            description=description,
+            tags=tags,
+            offset=offset,
+            limit=limit,
+        )
+        result = {
+            "offset": json_dict["featuregroupsFrom"],
+            "total": json_dict["featuregroupsTotal"],
+            "feature_groups": [],
+        }
+        for item in json_dict["featuregroups"]:
+            fg = {}
+            result["feature_groups"].append(fg)
+            fg["project"] = item["parentProjectName"]
+            fg["featurestore_id"] = item["featurestoreId"]
+            fg["name"] = item["name"]
+            fg["version"] = item["version"]
+            fg["description"] = item["description"]
+            fg["access_projects"] = []
+            for i in item["accessProjects"]["entry"]:
+                fg["access_project"].append({"name": i["value"]})
+
+        return result
+
+    def global_search_feature_groups(
+        self,
+        term: str = None,
+        name: str = None,
+        description: str = None,
+        tags: str = None,
+        offset: int = 0,
+        limit: int = 100,
+    ):
+        json_dict = self._search_api.global_search(
+            "FEATURE",
+            term=term,
+            name=name,
+            description=description,
+            tags=tags,
+            offset=offset,
+            limit=limit,
+        )
+        result = {
+            "offset": json_dict["featuregroupsFrom"],
+            "total": json_dict["featuregroupsTotal"],
+            "feature_groups": [],
+        }
+        for item in json_dict["featuregroups"]:
+            fg = {}
+            result["feature_groups"].append(fg)
+            fg["project"] = item["parentProjectName"]
+            fg["featurestore_id"] = item["featurestoreId"]
+            fg["name"] = item["name"]
+            fg["version"] = item["version"]
+            fg["description"] = item["description"]
+            fg["access_projects"] = []
+            for i in item["accessProjects"]["entry"]:
+                fg["access_project"].append({"name": i["value"]})
+        return result
+
+    def search_training_datasets(
+        self,
+        term: str = None,
+        name: str = None,
+        description: str = None,
+        tags: str = None,
+        offset: int = 0,
+        limit: int = 100,
+    ):
+        json_dict = self._search_api.search(
+            "TRAINING_DATASET",
+            term=term,
+            name=name,
+            description=description,
+            tags=tags,
+            offset=offset,
+            limit=limit,
+        )
+        result = {
+            "offset": json_dict["trainingdatasetsFrom"],
+            "total": json_dict["trainingdatasetsTotal"],
+            "training_datasets": [],
+        }
+        for item in json_dict["trainingdatasets"]:
+            td = {}
+            result["training_datasets"].append(td)
+            td["project"] = item["parentProjectName"]
+            td["featurestore_id"] = item["featurestoreId"]
+            td["name"] = item["name"]
+            td["version"] = item["version"]
+            td["description"] = item["description"]
+            td["access_projects"] = []
+            for i in item["accessProjects"]["entry"]:
+                td["access_project"].append({"name": i["value"]})
+        return result
+
+    def global_search_training_datasets(
+        self,
+        term: str = None,
+        name: str = None,
+        description: str = None,
+        tags: str = None,
+        offset: int = 0,
+        limit: int = 100,
+    ):
+        json_dict = self._search_api.global_search(
+            "TRAINING_DATASET",
+            term=term,
+            name=name,
+            description=description,
+            tags=tags,
+            offset=offset,
+            limit=limit,
+        )
+        result = {
+            "offset": json_dict["trainingdatasetsFrom"],
+            "total": json_dict["trainingdatasetsTotal"],
+            "training_datasets": [],
+        }
+        for item in json_dict["trainingdatasets"]:
+            td = {}
+            result["training_datasets"].append(td)
+            td["project"] = item["parentProjectName"]
+            td["featurestore_id"] = item["featurestoreId"]
+            td["name"] = item["name"]
+            td["version"] = item["version"]
+            td["description"] = item["description"]
+            td["access_projects"] = []
+            for i in item["accessProjects"]["entry"]:
+                td["access_project"].append({"name": i["value"]})
+        return result
 
     def get_on_demand_feature_group(self, name: str, version: int = None):
         """Get a on-demand feature group entity from the feature store.
