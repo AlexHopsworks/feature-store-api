@@ -158,7 +158,7 @@ class FeatureStore:
             fg["description"] = item["description"]
             fg["access_projects"] = []
             for i in item["accessProjects"]["entry"]:
-                fg["access_project"].append({"name": i["value"]})
+                fg["access_projects"].append({"name": i["value"]})
 
         return result
 
@@ -195,7 +195,7 @@ class FeatureStore:
             fg["description"] = item["description"]
             fg["access_projects"] = []
             for i in item["accessProjects"]["entry"]:
-                fg["access_project"].append({"name": i["value"]})
+                fg["access_projects"].append({"name": i["value"]})
         return result
 
     def search_training_datasets(
@@ -231,7 +231,7 @@ class FeatureStore:
             td["description"] = item["description"]
             td["access_projects"] = []
             for i in item["accessProjects"]["entry"]:
-                td["access_project"].append({"name": i["value"]})
+                td["access_projects"].append({"name": i["value"]})
         return result
 
     def global_search_training_datasets(
@@ -267,7 +267,7 @@ class FeatureStore:
             td["description"] = item["description"]
             td["access_projects"] = []
             for i in item["accessProjects"]["entry"]:
-                td["access_project"].append({"name": i["value"]})
+                td["access_projects"].append({"name": i["value"]})
         return result
 
     def get_on_demand_feature_group(self, name: str, version: int = None):
