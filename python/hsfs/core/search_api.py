@@ -38,7 +38,12 @@ class SearchApi:
             "elastic",
             "fs",
         ]
-        query_params = {"docType": type, "from": offset, "size": limit, "filter_by": []}
+        query_params = {
+            "doc_type": type,
+            "from": offset,
+            "size": limit,
+            "filter_by": [],
+        }
 
         if term is not None:
             query_params["term"] = term
@@ -67,7 +72,12 @@ class SearchApi:
             "elastic",
             "fs",
         ]
-        query_params = {"docType": type, "from": offset, "size": limit, "filter_by": []}
+        query_params = {
+            "doc_type": type,
+            "from": offset,
+            "size": limit,
+            "filter_by": [],
+        }
 
         if term is not None:
             query_params["term"] = term
