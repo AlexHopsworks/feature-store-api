@@ -135,7 +135,7 @@ class FeatureStore:
         limit: int = 100,
     ):
         json_dict = self._search_api.search(
-            "FEATURE",
+            "FEATUREGROUP",
             term=term,
             name=name,
             description=description,
@@ -172,7 +172,7 @@ class FeatureStore:
         limit: int = 100,
     ):
         json_dict = self._search_api.global_search(
-            "FEATURE",
+            "FEATUREGROUP",
             term=term,
             name=name,
             description=description,
@@ -208,7 +208,7 @@ class FeatureStore:
         limit: int = 100,
     ):
         json_dict = self._search_api.search(
-            "TRAINING_DATASET",
+            "TRAININGDATASET",
             term=term,
             name=name,
             description=description,
@@ -244,7 +244,7 @@ class FeatureStore:
         limit: int = 100,
     ):
         json_dict = self._search_api.global_search(
-            "TRAINING_DATASET",
+            "TRAININGDATASET",
             term=term,
             name=name,
             description=description,
