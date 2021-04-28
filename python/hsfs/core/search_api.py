@@ -72,11 +72,11 @@ class SearchApi:
         if term is not None:
             query_params["term"] = term
         if name is not None:
-            query_params["filter_by"].append("filter_by=NAME:" + term)
+            query_params["filter_by"].append("filter_by=NAME:" + name)
         if description is not None:
-            query_params["filter_by"].append("filter_by=DESCRIPTION:" + term)
+            query_params["filter_by"].append("filter_by=DESCRIPTION:" + description)
         if tags is not None:
-            query_params["filter_by"].append("filter_by=METADATA:" + term)
+            query_params["filter_by"].append("filter_by=METADATA:" + tags)
 
         headers = {"content-type": "application/json"}
         return _client._send_request("GET", path_params, query_params, headers=headers)
