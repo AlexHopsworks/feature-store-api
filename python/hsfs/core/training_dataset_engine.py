@@ -21,7 +21,12 @@ import avro.io
 from sqlalchemy import sql
 
 from hsfs import engine, training_dataset_feature, util
-from hsfs.core import training_dataset_api, tags_api, storage_connector_api
+from hsfs.core import (
+    training_dataset_api,
+    tags_api,
+    storage_connector_api,
+    provenance_api,
+)
 from hsfs.constructor import query
 
 
@@ -38,6 +43,7 @@ class TrainingDatasetEngine:
         self._storage_connector_api = storage_connector_api.StorageConnectorApi(
             feature_store_id
         )
+        self._provenance_api = provenance_api.ProvenanceApi()
 
     def save(self, training_dataset, features, user_write_options):
         if isinstance(features, query.Query):
@@ -109,6 +115,30 @@ class TrainingDatasetEngine:
     def get_tags(self, training_dataset):
         """Get all tags for a training dataset."""
         return self._tags_api.get(training_dataset)
+
+    def sourced_from(self, training_dataset):
+        return self._provenance_api.app_links(
+            in_artifact_type="FEATURE",
+            out_artifact_type="TRAINING_DATASET",
+            out_artifact_name=training_dataset.name,
+            out_artifact_version=training_dataset.version,
+        )
+
+    def generated_models(self, training_dataset):
+        return self._provenance_api.app_links(
+            in_artifact_type="TRAINING_DATASET",
+            in_artifact_name=training_dataset.name,
+            in_artifact_version=training_dataset.version,
+            out_artifact_type="MODEL",
+        )
+
+    def used_in_experiments(self, training_dataset):
+        return self._provenance_api.app_links(
+            in_artifact_type="TRAINING_DATASET",
+            in_artifact_name=training_dataset.name,
+            in_artifact_version=training_dataset.version,
+            out_artifact_type="EXPERIMENT",
+        )
 
     def update_statistics_config(self, training_dataset):
         """Update the statistics configuration of a feature group."""

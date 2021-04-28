@@ -209,6 +209,15 @@ class FeatureGroupBase:
         """
         return self._feature_group_base_engine.get_tags(self)
 
+    def sourced_from(self):
+        return self._feature_group_base_engine.sourced_from(self)
+
+    def generated_feature_groups(self):
+        return self._feature_group_base_engine.generated_feature_groups(self)
+
+    def generated_training_datasets(self):
+        return self._feature_group_base_engine.generated_training_datasets(self)
+
     def get_feature(self, name: str):
         """Retrieve a `Feature` object from the schema of the feature group.
 

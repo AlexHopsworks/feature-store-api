@@ -321,6 +321,15 @@ class TrainingDataset:
         """
         return self._training_dataset_engine.get_tags(self)
 
+    def sourced_from(self):
+        return self._training_dataset_engine.sourced_from(self)
+
+    def generated_models(self):
+        return self._training_dataset_engine.generated_models(self)
+
+    def used_in_experiments(self):
+        return self._training_dataset_engine.used_in_experiments(self)
+
     def update_statistics_config(self):
         """Update the statistics configuration of the training dataset.
 
