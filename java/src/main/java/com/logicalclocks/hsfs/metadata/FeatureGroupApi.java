@@ -49,6 +49,8 @@ public class FeatureGroupApi {
   public static final String FEATURE_GROUP_COMMIT_PATH = FEATURE_GROUP_ID_PATH
       + "/commits{?filter_by,sort_by,offset,limit}";
   public static final String FEATURE_GROUP_CLEAR_PATH = FEATURE_GROUP_ID_PATH + "/clear";
+  public static final String FEATURE_GROUP_PROVENANCE_LINKS = FEATURE_GROUP_ID_PATH + "/provenance/links" +
+    "{?expand,upstreamLvls,downstreamLvls}";
 
   private static final Logger LOGGER = LoggerFactory.getLogger(FeatureGroupApi.class);
 
@@ -359,5 +361,25 @@ public class FeatureGroupApi {
     }
 
     return featureGroup;
+  }
+
+  public void getParentFeatureGroups(FeatureGroupBase featureGroupBase) throws FeatureStoreException {
+    HopsworksClient hopsworksClient = HopsworksClient.getInstance();
+    String pathTemplate = PROJECT_PATH
+      + FeatureStoreApi.FEATURE_STORE_PATH
+      + FEATURE_GROUP_PROVENANCE_LINKS;
+
+    UriTemplate uriTemplate = UriTemplate.fromTemplate(pathTemplate)
+      .set("projectId", featureGroupBase.getFeatureStore().getProjectId())
+      .set("fsId", featureGroupBase.getFeatureStore().getId())
+      .set("fgId", featureGroupBase.getId())
+      .set("expand", "provenance_artifacts")
+      .set("upstreamLvls", 1)
+      .set("downstreamLvls", 1);
+
+    String uri = uriTemplate.expand();
+
+    LOGGER.info("Sending metadata request: " + uri);
+    FeatureGroupCommit featureGroupCommit = hopsworksClient.handleRequest(new HttpGet(uri), FeatureGroupCommit.class);
   }
 }
