@@ -102,7 +102,7 @@ class Links:
     def __parse_feature_groups(links_json: dict, artifacts: Set[str]):
         links = Links()
         for link_json in links_json:
-            if link_json["artifact_type"] in artifacts:
+            if link_json["node"]["artifact_type"] in artifacts:
                 if bool(link_json["node"]["accessible"]):
                     links.accessible.append(
                         Links.__feature_group(link_json["node"]["artifact"])
@@ -118,7 +118,7 @@ class Links:
     def __parse_feature_views(links_json: dict, artifacts: Set[str]):
         links = Links()
         for link_json in links_json:
-            if link_json["artifact_type"] in artifacts:
+            if link_json["node"]["artifact_type"] in artifacts:
                 if bool(link_json["node"]["accessible"]):
                     links.accessible.append(
                         feature_view.FeatureView.from_response_json(
