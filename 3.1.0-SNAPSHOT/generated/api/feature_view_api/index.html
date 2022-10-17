@@ -1546,7 +1546,7 @@
 </code></pre></div>
 <hr />
 <h2 id="creation">Creation<a class="headerlink" href="#creation" title="Permanent link">#</a></h2>
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_store.py#L931">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_store.py#L923">[source]</a></span></p>
 <h3 id="create_feature_view">create_feature_view<a class="headerlink" href="#create_feature_view" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">FeatureStore</span><span class="o">.</span><span class="n">create_feature_view</span><span class="p">(</span>
     <span class="n">name</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">[],</span> <span class="n">transformation_functions</span><span class="o">=</span><span class="p">{}</span>
@@ -1581,7 +1581,7 @@ feature view does not support time travel query.</p>
 <p><code>FeatureView</code>: The feature view metadata object.</p>
 <hr />
 <h2 id="retrieval">Retrieval<a class="headerlink" href="#retrieval" title="Permanent link">#</a></h2>
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_store.py#L978">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_store.py#L970">[source]</a></span></p>
 <h3 id="get_feature_view">get_feature_view<a class="headerlink" href="#get_feature_view" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">FeatureStore</span><span class="o">.</span><span class="n">get_feature_view</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
@@ -1600,7 +1600,7 @@ feature view does not support time travel query.</p>
 <li><strong><code>RestAPIError</code></strong>: If unable to retrieve feature view from the feature store.</li>
 </ul>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_store.py#L1004">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_store.py#L996">[source]</a></span></p>
 <h3 id="get_feature_views">get_feature_views<a class="headerlink" href="#get_feature_views" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">FeatureStore</span><span class="o">.</span><span class="n">get_feature_views</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
 </code></pre></div>
@@ -1618,42 +1618,42 @@ feature view does not support time travel query.</p>
 </ul>
 <hr />
 <h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">#</a></h2>
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1242">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1227">[source]</a></span></p>
 <h3 id="description">description<a class="headerlink" href="#description" title="Permanent link">#</a></h3>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1203">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1188">[source]</a></span></p>
 <h3 id="featurestore_id">featurestore_id<a class="headerlink" href="#featurestore_id" title="Permanent link">#</a></h3>
 <p>Feature store id.</p>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1194">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1179">[source]</a></span></p>
 <h3 id="id">id<a class="headerlink" href="#id" title="Permanent link">#</a></h3>
 <p>Feature view id.</p>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1230">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1215">[source]</a></span></p>
 <h3 id="labels">labels<a class="headerlink" href="#labels" title="Permanent link">#</a></h3>
 <p>The labels/prediction feature of the feature view.</p>
 <p>Can be a composite of multiple features.</p>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1212">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1197">[source]</a></span></p>
 <h3 id="name">name<a class="headerlink" href="#name" title="Permanent link">#</a></h3>
 <p>Name of the feature view.</p>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1282">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1267">[source]</a></span></p>
 <h3 id="primary_keys">primary_keys<a class="headerlink" href="#primary_keys" title="Permanent link">#</a></h3>
 <p>Set of primary key names that is used as keys in input dict object for <code>get_serving_vector</code> method.</p>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1251">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1236">[source]</a></span></p>
 <h3 id="query">query<a class="headerlink" href="#query" title="Permanent link">#</a></h3>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1273">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1258">[source]</a></span></p>
 <h3 id="schema">schema<a class="headerlink" href="#schema" title="Permanent link">#</a></h3>
 <p>Feature view schema.</p>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1260">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1245">[source]</a></span></p>
 <h3 id="transformation_functions">transformation_functions<a class="headerlink" href="#transformation_functions" title="Permanent link">#</a></h3>
 <p>Set transformation functions.</p>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1221">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1206">[source]</a></span></p>
 <h3 id="version">version<a class="headerlink" href="#version" title="Permanent link">#</a></h3>
 <p>Version number of the feature view.</p>
 <hr />
@@ -1663,7 +1663,7 @@ feature view does not support time travel query.</p>
 <div class="highlight"><pre><span></span><code><span class="n">FeatureView</span><span class="o">.</span><span class="n">add_tag</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
 </code></pre></div>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1102">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1087">[source]</a></span></p>
 <h3 id="add_training_dataset_tag">add_training_dataset_tag<a class="headerlink" href="#add_training_dataset_tag" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">FeatureView</span><span class="o">.</span><span class="n">add_training_dataset_tag</span><span class="p">(</span><span class="n">training_dataset_version</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
 </code></pre></div>
@@ -1687,7 +1687,7 @@ feature view <strong>and</strong> related training dataset <strong>and</strong> 
 <p><strong>Raises</strong></p>
 <p><code>RestAPIError</code>.</p>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L403">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L388">[source]</a></span></p>
 <h3 id="create_train_test_split">create_train_test_split<a class="headerlink" href="#create_train_test_split" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">FeatureView</span><span class="o">.</span><span class="n">create_train_test_split</span><span class="p">(</span>
     <span class="n">test_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -1778,7 +1778,7 @@ training datasets:</p>
     When using the <code>python</code> engine, it returns the Hopsworks Job
     that was launched to create the training dataset.</p>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L525">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L510">[source]</a></span></p>
 <h3 id="create_train_validation_test_split">create_train_validation_test_split<a class="headerlink" href="#create_train_validation_test_split" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">FeatureView</span><span class="o">.</span><span class="n">create_train_validation_test_split</span><span class="p">(</span>
     <span class="n">validation_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -1879,7 +1879,7 @@ training datasets:</p>
     When using the <code>python</code> engine, it returns the Hopsworks Job
     that was launched to create the training dataset.</p>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L299">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L284">[source]</a></span></p>
 <h3 id="create_training_data">create_training_data<a class="headerlink" href="#create_training_data" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">FeatureView</span><span class="o">.</span><span class="n">create_training_data</span><span class="p">(</span>
     <span class="n">start_time</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
@@ -1973,27 +1973,27 @@ feature view <strong>and</strong> related training dataset <strong>and</strong> 
 <p><strong>Raises</strong></p>
 <p><code>RestAPIError</code>.</p>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1135">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1120">[source]</a></span></p>
 <h3 id="delete_all_training_datasets">delete_all_training_datasets<a class="headerlink" href="#delete_all_training_datasets" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">FeatureView</span><span class="o">.</span><span class="n">delete_all_training_datasets</span><span class="p">()</span>
 </code></pre></div>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L296">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L281">[source]</a></span></p>
 <h3 id="delete_tag">delete_tag<a class="headerlink" href="#delete_tag" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">FeatureView</span><span class="o">.</span><span class="n">delete_tag</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
 </code></pre></div>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1130">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1115">[source]</a></span></p>
 <h3 id="delete_training_dataset">delete_training_dataset<a class="headerlink" href="#delete_training_dataset" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">FeatureView</span><span class="o">.</span><span class="n">delete_training_dataset</span><span class="p">(</span><span class="n">version</span><span class="p">)</span>
 </code></pre></div>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1117">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1102">[source]</a></span></p>
 <h3 id="delete_training_dataset_tag">delete_training_dataset_tag<a class="headerlink" href="#delete_training_dataset_tag" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">FeatureView</span><span class="o">.</span><span class="n">delete_training_dataset_tag</span><span class="p">(</span><span class="n">training_dataset_version</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
 </code></pre></div>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1138">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1123">[source]</a></span></p>
 <h3 id="from_response_json">from_response_json<a class="headerlink" href="#from_response_json" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">FeatureView</span><span class="o">.</span><span class="n">from_response_json</span><span class="p">(</span><span class="n">json_dict</span><span class="p">)</span>
 </code></pre></div>
@@ -2073,22 +2073,6 @@ features in the feature view query.</p>
 <p><strong>Returns</strong></p>
 <p><code>List[list]</code> List of lists of feature values related to provided primary keys, ordered according to positions of this features in the feature view query.</p>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L281">[source]</a></span></p>
-<h3 id="get_parent_feature_groups">get_parent_feature_groups<a class="headerlink" href="#get_parent_feature_groups" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">FeatureView</span><span class="o">.</span><span class="n">get_parent_feature_groups</span><span class="p">()</span>
-</code></pre></div>
-<p>Get the parents of this feature view, based on explicit provenance.
-Parents are feature groups: cached, streaming or external. These feature
-groups can be accessible, deleted or inaccessible.
-For deleted and inaccessible feature groups, only a minimal information is
-returned.</p>
-<p><strong>Arguments</strong></p>
-<ul>
-<li><strong>feature_view_obj</strong>: Metadata object of feature view.</li>
-</ul>
-<p><strong>Returns</strong></p>
-<p><code>ProvenanceLinks</code>:  the feature groups used to generated this feature view</p>
-<hr />
 <p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L275">[source]</a></span></p>
 <h3 id="get_tag">get_tag<a class="headerlink" href="#get_tag" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">FeatureView</span><span class="o">.</span><span class="n">get_tag</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
@@ -2099,7 +2083,7 @@ returned.</p>
 <div class="highlight"><pre><span></span><code><span class="n">FeatureView</span><span class="o">.</span><span class="n">get_tags</span><span class="p">()</span>
 </code></pre></div>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1030">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1015">[source]</a></span></p>
 <h3 id="get_train_test_split">get_train_test_split<a class="headerlink" href="#get_train_test_split" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">FeatureView</span><span class="o">.</span><span class="n">get_train_test_split</span><span class="p">(</span><span class="n">training_dataset_version</span><span class="p">,</span> <span class="n">read_options</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
@@ -2125,7 +2109,7 @@ recreate the training data.</p>
 <p>(X_train, X_test, y_train, y_test):
     Tuple of dataframe of features and labels</p>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1064">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1049">[source]</a></span></p>
 <h3 id="get_train_validation_test_split">get_train_validation_test_split<a class="headerlink" href="#get_train_validation_test_split" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">FeatureView</span><span class="o">.</span><span class="n">get_train_validation_test_split</span><span class="p">(</span><span class="n">training_dataset_version</span><span class="p">,</span> <span class="n">read_options</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
@@ -2151,7 +2135,7 @@ recreate the training data.</p>
 <p>(X_train, X_val, X_test, y_train, y_val, y_test):
     Tuple of dataframe of features and labels</p>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L995">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L980">[source]</a></span></p>
 <h3 id="get_training_data">get_training_data<a class="headerlink" href="#get_training_data" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">FeatureView</span><span class="o">.</span><span class="n">get_training_data</span><span class="p">(</span><span class="n">training_dataset_version</span><span class="p">,</span> <span class="n">read_options</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
@@ -2182,12 +2166,12 @@ Python as Engine, instead you will have to use the storage's native client.</p>
 <p><strong>Returns</strong></p>
 <p>(X, y): Tuple of dataframe of features and labels</p>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1107">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1092">[source]</a></span></p>
 <h3 id="get_training_dataset_tag">get_training_dataset_tag<a class="headerlink" href="#get_training_dataset_tag" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">FeatureView</span><span class="o">.</span><span class="n">get_training_dataset_tag</span><span class="p">(</span><span class="n">training_dataset_version</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
 </code></pre></div>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1112">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1097">[source]</a></span></p>
 <h3 id="get_training_dataset_tags">get_training_dataset_tags<a class="headerlink" href="#get_training_dataset_tags" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">FeatureView</span><span class="o">.</span><span class="n">get_training_dataset_tags</span><span class="p">(</span><span class="n">training_dataset_version</span><span class="p">)</span>
 </code></pre></div>
@@ -2223,22 +2207,22 @@ Python as Engine, instead you will have to use the storage's native client.</p>
     Sagemaker or Google Colab), otherwise to False.</li>
 </ul>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1181">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1166">[source]</a></span></p>
 <h3 id="json">json<a class="headerlink" href="#json" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">FeatureView</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre></div>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1127">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1112">[source]</a></span></p>
 <h3 id="purge_all_training_data">purge_all_training_data<a class="headerlink" href="#purge_all_training_data" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">FeatureView</span><span class="o">.</span><span class="n">purge_all_training_data</span><span class="p">()</span>
 </code></pre></div>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1122">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1107">[source]</a></span></p>
 <h3 id="purge_training_data">purge_training_data<a class="headerlink" href="#purge_training_data" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">FeatureView</span><span class="o">.</span><span class="n">purge_training_data</span><span class="p">(</span><span class="n">version</span><span class="p">)</span>
 </code></pre></div>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L665">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L650">[source]</a></span></p>
 <h3 id="recreate_training_dataset">recreate_training_dataset<a class="headerlink" href="#recreate_training_dataset" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">FeatureView</span><span class="o">.</span><span class="n">recreate_training_dataset</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">write_options</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
@@ -2264,12 +2248,12 @@ recreate the training data.</p>
 <p><code>Job</code>: When using the <code>python</code> engine, it returns the Hopsworks Job
     that was launched to create the training dataset.</p>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1184">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1169">[source]</a></span></p>
 <h3 id="to_dict">to_dict<a class="headerlink" href="#to_dict" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">FeatureView</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
 </code></pre></div>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L764">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L749">[source]</a></span></p>
 <h3 id="train_test_split">train_test_split<a class="headerlink" href="#train_test_split" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">FeatureView</span><span class="o">.</span><span class="n">train_test_split</span><span class="p">(</span>
     <span class="n">test_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -2327,7 +2311,7 @@ recreate the training data.</p>
 <p>(X_train, X_test, y_train, y_test):
     Tuple of dataframe of features and labels</p>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L862">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L847">[source]</a></span></p>
 <h3 id="train_validation_test_split">train_validation_test_split<a class="headerlink" href="#train_validation_test_split" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">FeatureView</span><span class="o">.</span><span class="n">train_validation_test_split</span><span class="p">(</span>
     <span class="n">validation_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -2395,7 +2379,7 @@ recreate the training data.</p>
 <p>(X_train, X_val, X_test, y_train, y_val, y_test):
     Tuple of dataframe of features and labels</p>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L694">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L679">[source]</a></span></p>
 <h3 id="training_data">training_data<a class="headerlink" href="#training_data" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">FeatureView</span><span class="o">.</span><span class="n">training_data</span><span class="p">(</span>
     <span class="n">start_time</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -2449,7 +2433,7 @@ formatted in one of the following
 <div class="highlight"><pre><span></span><code><span class="n">FeatureView</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
 </code></pre></div>
 <hr />
-<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1161">[source]</a></span></p>
+<p><span style="float:right;"><a href="https://github.com/logicalclocks/feature-store-api/blob/master/python/hsfs/feature_view.py#L1146">[source]</a></span></p>
 <h3 id="update_from_response_json">update_from_response_json<a class="headerlink" href="#update_from_response_json" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">FeatureView</span><span class="o">.</span><span class="n">update_from_response_json</span><span class="p">(</span><span class="n">json_dict</span><span class="p">)</span>
 </code></pre></div>
