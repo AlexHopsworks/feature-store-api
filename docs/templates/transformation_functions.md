@@ -4,9 +4,9 @@ HSFS provides functionality to attach transformation functions to [training data
 
 User defined, custom transformation functions need to be registered in the Feature Store to make them accessible for
 training dataset creation. To register them in the Feature Store they either have to be part of the library
-[installed](https://hopsworks.readthedocs.io/en/stable/user_guide/hopsworks/python.html?highlight=install#installing-libraries) in Hopsworks
-or attached when starting a [Jupyter notebook](https://hopsworks.readthedocs.io/en/stable/user_guide/hopsworks/jupyter.html?highlight=jupyter)
-or [Hopsworks job](https://hopsworks.readthedocs.io/en/stable/user_guide/hopsworks/jobs.html).
+[installed](https://docs.hopsworks.ai/3.0/user_guides/projects/python/python_install/) in Hopsworks
+or attached when starting a [Jupyter notebook](https://docs.hopsworks.ai/3.0/user_guides/projects/jupyter/python_notebook/)
+or [Hopsworks job](https://docs.hopsworks.ai/3.0/user_guides/projects/jobs/python_job/).
 
 !!! warning "Pyspark decorators"
     Don't decorate transformation functions with Pyspark `@udf` or `@pandas_udf`, as well as don't use any Pyspark dependencies.
